@@ -1,33 +1,106 @@
-TITTLE --                     	Customer Churn Prediction 
+# Customer Churn Prediction
 
-ABOUT -- The purpose of this project is to build a machine learning  model that predicts whether customer will leave the company or not , based upon there demographic and service-related information.
+## Project Overview
 
-PROBLEM STATEMENT -- Customer churn is a major challenge for businesses, as losing customers can negatively impact revenue and growth. This model can help businesses identify customers who are at risk of leaving and take proactive steps to improve customer retention.
+Customer Churn Prediction is a machine learning project that predicts whether a customer is likely to leave a company based on demographic and service-related information.
 
-DATASET -- This dataset is downloaded from kaggle , it have (1000 rows and 10 columns) . 
+The project aims to help businesses identify customers at risk of churning and take proactive steps to improve customer retention.
 
-TECHNOLOGIES used -- Python , Pandas , Numpy , Seaborn , Matplotlib etc....
+## Problem Statement
 
-APPROACH--
-we imported the dataset in CSV format , stored it in "df" object . Ran some info , isnull commands and got that in column name -> 'internet service ' we have 297 values missing....
-since it is imp column for our model we decided to keep it and we removed the "Nan" with empty space for now...
-next checked for any Duplicate values and it came 0 .
-Now we checked for correaltions btw numerical columns and we got one (btw - monthly charge and Tenure)...
+Customer churn is a major challenge for businesses, as losing customers can negatively impact revenue and growth. This project uses machine learning techniques to predict customer churn and support better customer retention strategies.
 
-next we did some Data Visualizations for more insights--
+## Dataset
 
-next we will do - Feature Engineering ....
-ENCODING --> we did Binary Encoding on two categorical columns (CHURN , GENDER ) , we did binary encoding because both columns have only 2 options..
+- **Source:** Kaggle
+- **Records:** 1,000 rows
+- **Features:** 10 columns
+- **Target Variable:** Churn
 
-next we are doing Feature Scaling ....
-we are doing Standardiztion...+ saved this scaler in form of .pkl file.....
-next to calculate accuracy score of models we made a function called - modelperformance.
-we trained and transformed our model and getting the accuracy of - 85%...after getting aaccuracy score on Logistic regression algorithm , we know train new algorithm on the same data set to compare the aaccuracy score..
-accuracy for KNEIGHBOURS came - 84%
-accuracy for SVM came - 87%
-accuracy for DECISION TREE CLASSIFIER -  85%
-accuracy for RANDOM FOREST CLASSIFIER - 83%
+## Technologies Used
 
-in the very end we choose the model which gave the most accuracy percentage i.e - SVM..
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Streamlit
 
-Model is exported as model.pkl
+## Project Workflow
+
+1. **Data Loading:** Imported the dataset using Pandas.
+2. **Data Cleaning:** Checked for missing values and duplicate records. Handled missing entries in the Internet Service column.
+3. **Exploratory Data Analysis:** Analyzed numerical features and explored relationships using correlation and data visualizations.
+4. **Feature Encoding:** Applied binary encoding to the Gender and Churn columns.
+5. **Feature Scaling:** Used StandardScaler to standardize numerical features.
+6. **Model Training:** Trained and evaluated multiple machine learning algorithms.
+7. **Model Selection:** Compared model accuracy and selected SVM based on the highest reported accuracy.
+
+## Model Performance
+
+The following accuracy scores were obtained during model evaluation:
+
+| Machine Learning Model | Accuracy |
+|---|---:|
+| Logistic Regression | 85% |
+| K-Nearest Neighbors | 84% |
+| Support Vector Machine (SVM) | **87%** |
+| Decision Tree Classifier | 85% |
+| Random Forest Classifier | 83% |
+
+**Best Performing Model:** Support Vector Machine (SVM) with 87% accuracy.
+
+## Model Deployment
+
+The trained model and scaler were saved as `.pkl` files using model persistence.
+
+A web application was developed using Streamlit, allowing users to enter customer information and receive churn predictions.
+
+The application is deployed on Render.
+
+## Project Structure
+
+```text
+customer-churn-prediction/
+│
+├── app.py
+├── model.pkl
+├── scaler.pkl
+├── customer_churn_data.csv
+├── notebook.ipynb
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+## How to Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/shashank-43/customer-churn-prediction.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd customer-churn-prediction
+```
+
+3. Install the required libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+## Project Links
+
+- **GitHub Repository:** https://github.com/shashank-43/customer-churn-prediction
+- **Live Application:** Add your Render deployment URL here.
