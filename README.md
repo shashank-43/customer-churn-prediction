@@ -12,7 +12,7 @@ Customer churn is a major challenge for businesses, as losing customers can nega
 
 ## Dataset
 
-- **Source:** Kaggle
+- **Source:** Kaggle https://www.kaggle.com/datasets/abdullah0a/telecom-customer-churn-insights-for-analysis
 - **Records:** 1,000 rows
 - **Features:** 10 columns
 - **Target Variable:** Churn
