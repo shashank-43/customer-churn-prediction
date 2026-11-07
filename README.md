@@ -103,4 +103,4 @@ streamlit run app.py
 ## Project Links
 
 - **GitHub Repository:** https://github.com/shashank-43/customer-churn-prediction
-- **Live Application:** Add your Render deployment URL here.
+- **Live Application:** https://customer-churn-prediction-poiq.onrender.com/#churn-prediction-app
